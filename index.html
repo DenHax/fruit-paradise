@@ -13,18 +13,21 @@
 
 <body>
   <header>
-    <div class="logo"></div>
+    <p class="logo">Fruit Paradise</p>
     <nav class="nav-container">
-      <a href="#">Купить</a>
-      <a href="#">Новости</a>
-      <a href="#">Профиль</a>
-      <a href="#">Корзина <img src="assets/shop.png" alt="shop"></a>
+      <a class="buy" href="#">Купить</a>
+      <a class="news" href="#">Новости</a>
+      <a class="profile" href="#">Профиль</a>
+      <div class="cart">
+        <a href="#">Корзина</a>
+        <img src="assets/shop.png" alt="shop">
+      </div>
     </nav>
   </header>
 
   <main>
     <div class="fruits-list">
-      <div>
+      <div class="fruit-card">
         <img src="assets/banana.png" alt="banana">
         <div class="fruit-desc">
           <p class="fruit-name">Бананы</p>
@@ -40,7 +43,7 @@
         </div>
         <button class="add-to-cart">Добавить в корзину</button>
       </div>
-      <div>
+      <div class="fruit-card">
         <img src="assets/orange.png" alt="orange">
         <div class="fruit-desc">
           <p class="fruit-name">Мандарин</p>
