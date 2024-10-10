@@ -9,3 +9,13 @@ loves.forEach(love => {
     }
   });
 });
+
+o
+function toggleHeader() {
+  const nav_head = document.querySelector(".nav-container");
+  if (nav_head.style.display === 'none' || nav_head.style.display === '') {
+    nav_head.style.display = 'flex';
+  } else {
+    nav_head.style.display = 'none';
+  }
+}
