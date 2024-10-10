@@ -20,17 +20,27 @@ a {
   text-decoration: none;
 }
 
+.header-open-btn {
+  display: none;
+}
+
+.line {
+  background-color: #ABABAB;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 2px;
+}
+
 header {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  align-items: space-between;
+  /*align-items: space-between;*/
   padding: 5% 10% 2% 8%;
   width: 100%;
 }
 
 .logo {
-  flex: 0 0 44%;
   color: #292929;
   font-size: 24px;
   font-weight: 700;
@@ -127,14 +137,13 @@ footer {
   background: #EDEDED;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .fruits-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-@media (max-width: 800px) {
+@media (max-width: 870px) {
   header {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -148,6 +157,19 @@ footer {
     flex-direction: column;
   }
 
+  .nav-container {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .header-open-btn {
+    display: grid;
+    cursor: pointer;
+    grid-template-rows: repeat(3, 4px);
+    align-items: center;
+    justify-items: center;
+    row-gap: 0.2rem;
+  }
 }
 
 @media (max-width: 750px) {
