@@ -20,9 +20,9 @@ a {
   text-decoration: none;
 }
 
-.header-open-btn {
-  display: none;
-}
+/*.header-open-btn {*/
+/*  display: none;*/
+/*}*/
 
 .line {
   background-color: #ABABAB;
@@ -47,7 +47,6 @@ header {
 }
 
 .nav-container {
-  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,8 +66,8 @@ header {
 
 .cart {
   border: 1px solid #888888;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 0.5rem;
   align-items: center;
   padding: 0.5rem 0.9rem;
@@ -78,21 +77,26 @@ header {
 }
 
 main {
-  padding: 2% 10% 2% 8%;
+  padding: 4% 10% 4% 8%;
 }
 
 .fruits-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4rem;
+  grid-template-columns: repeat(3, 0.9fr);
+  grid-gap: 4%;
 }
 
 .fruit-card {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   position: relative;
+}
+
+.fruit-img {
+  width: 100%;
+  height: 100%;
 }
 
 .love-logo {
@@ -105,17 +109,15 @@ main {
 }
 
 .fruit-desc {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  text-align: left;
   align-items: center;
-  justify-content: space-between;
 }
 
 .cart-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   border-radius: 50px;
   border: 1px solid #888888;
   padding: 0.5rem 0.9rem;
@@ -137,7 +139,13 @@ footer {
   background: #EDEDED;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1100px) {
+  .nav-container {
+    display: flex;
+  }
+}
+
+@media (max-width: 1100px) {
   .fruits-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -151,25 +159,23 @@ footer {
 
   .logo {
     text-align: center;
-  }
-
-  .nav-container {
-    flex-direction: column;
+    cursor: pointer;
   }
 
   .nav-container {
     display: none;
     transition: all 0.3s ease;
+    flex-direction: column;
   }
 
-  .header-open-btn {
-    display: grid;
-    cursor: pointer;
-    grid-template-rows: repeat(3, 4px);
-    align-items: center;
-    justify-items: center;
-    row-gap: 0.2rem;
-  }
+  /*.header-open-btn {*/
+  /*  display: grid;*/
+  /*  cursor: pointer;*/
+  /*  grid-template-rows: repeat(3, 4px);*/
+  /*  align-items: center;*/
+  /*  justify-items: center;*/
+  /*  row-gap: 0.2rem;*/
+  /*}*/
 }
 
 @media (max-width: 750px) {
